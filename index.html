@@ -1,0 +1,147 @@
+<!--
+  Google Sites에 참고용으로 붙여넣거나 레이아웃을 그대로 재현할 수 있는
+  작가노트 샘플 템플릿 5종을 한 파일에 모아둔 HTML 예시입니다.
+  이미지 파일은 "hero.jpg", "img1.jpg" ... "img5.jpg" 같은 이름으로 교체하세요.
+  Google Sites는 직접 HTML 업로드를 지원하지 않으므로 이 코드는
+  (1) 레이아웃 참조용으로 사용하거나
+  (2) 단독 HTML 페이지로 호스팅하여 샘플 디자인을 확인하는 용도로 사용하세요.
+-->
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>작가노트 샘플 템플릿 모음</title>
+  <style>
+    :root{--maxw:980px;--accent:#111;--muted:#666;--pad:28px}
+    body{font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans KR', 'Segoe UI', Roboto, Arial; color:var(--accent); line-height:1.6; padding:40px; background:#faf7f2}
+    .wrap{max-width:var(--maxw);margin:0 auto;background:#fff;padding:36px;border-radius:10px;box-shadow:0 8px 30px rgba(0,0,0,.06)}
+    h1{font-size:28px;margin:0 0 8px}
+    h2{font-size:20px;margin:18px 0}
+    p.lead{color:var(--muted);margin-top:0}
+    .grid{display:grid;gap:18px}
+    .grid.cols-3{grid-template-columns:repeat(3,1fr)}
+    .grid.cols-2{grid-template-columns:repeat(2,1fr)}
+    .card{background:#fff;border-radius:8px;overflow:hidden}
+    img{width:100%;height:auto;display:block}
+    .caption{padding:10px 12px;font-size:14px;color:var(--muted);text-align:center}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .meta{font-size:14px;color:var(--muted)}
+    .section{margin:28px 0;padding-bottom:8px;border-bottom:1px solid #f0ece8}
+    pre{background:#f7f5f2;padding:12px;border-radius:6px;overflow:auto}
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:#111;color:#fff;text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>작가노트 샘플 템플릿 모음</h1>
+    <p class="lead">아래 5가지 템플릿은 Google Sites에 손쉽게 구현 가능한 레이아웃 예시입니다. 이미지만 교체하면 바로 활용 가능하도록 캡션·문구 예시를 포함했습니다.</p>
+
+    <!-- TEMPLATE A: HERO + GALLERY + NOTE -->
+    <section class="section" id="template-a">
+      <h2>템플릿 A — 대표 이미지 + 갤러리 + 작가노트</h2>
+      <p class="meta">추천: 동일한 주제로 묶인 사진 시리즈</p>
+
+      <!-- hero -->
+      <div class="card" style="margin-bottom:14px">
+        <img src="hero.jpg" alt="대표 이미지 (hero)">
+        <div style="padding:14px">
+          <strong>○○ 프로젝트 — 빛과 형태를 기록하다</strong>
+          <p class="caption">5장의 이미지로 구성된 시각 탐구 기록</p>
+        </div>
+      </div>
+
+      <!-- gallery -->
+      <div class="grid cols-3" style="margin-bottom:12px">
+        <div class="card"><img src="img1.jpg" alt="Image1"><div class="caption">Image 01 — 주제의 출발점</div></div>
+        <div class="card"><img src="img2.jpg" alt="Image2"><div class="caption">Image 02 — 형태 분해 실험</div></div>
+        <div class="card"><img src="img3.jpg" alt="Image3"><div class="caption">Image 03 — 빛의 흐름</div></div>
+      </div>
+      <div class="grid cols-3" style="margin-bottom:18px">
+        <div class="card"><img src="img4.jpg" alt="Image4"><div class="caption">Image 04 — 구조 확장</div></div>
+        <div class="card"><img src="img5.jpg" alt="Image5"><div class="caption">Image 05 — 의미의 결론</div></div>
+        <div></div>
+      </div>
+
+      <!-- artist note -->
+      <div>
+        <h3>작가노트</h3>
+        <p><strong>작업 주제:</strong> 일상에서 발견되는 조형적 질서를 사진으로 기록하고 재구성하는 작업이다.</p>
+        <p><strong>제작 과정:</strong> 조명 방향과 간결한 도형을 반복하여 형태의 경계와 그림자의 관계를 실험했다.</p>
+        <p><strong>감상 포인트:</strong> 각 이미지의 구도에서 시선의 흐름을 따라가 보세요 — 빛이 만드는 음영과 여백의 관계를 주목하면 좋습니다.</p>
+      </div>
+    </section>
+
+    <!-- TEMPLATE B: STORY FLOW -->
+    <section class="section" id="template-b">
+      <h2>템플릿 B — 스토리 흐름형</h2>
+      <p class="meta">추천: 사진마다 단계적 서사가 있을 때</p>
+      <div class="two-col" style="align-items:start">
+        <div>
+          <img src="img1.jpg" alt="stage1"><p class="caption">출발점 — 영감의 순간</p>
+          <img src="img2.jpg" alt="stage2" style="margin-top:10px"><p class="caption">확장 — 기법 실험</p>
+        </div>
+        <div>
+          <h3>서사 텍스트 예시</h3>
+          <p><strong>프롤로그:</strong> 이 시리즈는 '관찰'에서 시작되었다. 작은 일상에서 반복되는 형상들이 눈에 들어왔고, 이를 사진으로 기록해 구조화하려는 시도이다.</p>
+          <p><strong>중간:</strong> 빛을 바꾸고, 배경을 단순화하며 형태 간의 관계를 계속해서 재편집했다.</p>
+          <p><strong>에필로그:</strong> 완성된 이미지들은 한 가지 정서(침묵, 정돈)를 공유하며 관람자에게 여운을 남기도록 구성되었다.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPLATE C: CARD INFO -->
+    <section class="section" id="template-c">
+      <h2>템플릿 C — 카드형 상세정보</h2>
+      <p class="meta">추천: 사진별로 독립적 해설이 필요할 때</p>
+      <div class="grid cols-3">
+        <div class="card"><img src="img1.jpg"><div class="caption">영감의 이미지<br><small>이 사진은 작업의 핵심 개념을 상징한다.</small></div></div>
+        <div class="card"><img src="img2.jpg"><div class="caption">형태 실험<br><small>분해와 재조합의 과정.</small></div></div>
+        <div class="card"><img src="img3.jpg"><div class="caption">빛/조명 분석<br><small>명암 대비의 역할.</small></div></div>
+        <div class="card"><img src="img4.jpg"><div class="caption">재료/기법<br><small>촬영 설정·소도구 설명.</small></div></div>
+        <div class="card"><img src="img5.jpg"><div class="caption">최종 메시지<br><small>관람자에게 전하고 싶은 것.</small></div></div>
+      </div>
+    </section>
+
+    <!-- TEMPLATE D: RESEARCH REPORT -->
+    <section class="section" id="template-d">
+      <h2>템플릿 D — 연구보고서형</h2>
+      <p class="meta">추천: 심화된 텍스트와 분석이 필요할 때</p>
+      <div>
+        <h3>요약</h3>
+        <p>본 연구는 일상적 대상의 형상성을 사진으로 분석하고, 빛과 각이 결합되었을 때 발생하는 시각적 의미를 탐구한다.</p>
+        <h3>분석 (사진별)</h3>
+        <ol>
+          <li><strong>사진 1:</strong> 패턴/반복성 관찰</li>
+          <li><strong>사진 2:</strong> 형태 분절의 효과</li>
+          <li><strong>사진 3–4:</strong> 실험 과정과 수정 기록</li>
+          <li><strong>사진 5:</strong> 최종적 해석</li>
+        </ol>
+        <h3>참고</h3>
+        <p>관련 문헌·참고작가(간단 표기)</p>
+      </div>
+    </section>
+
+    <!-- TEMPLATE E: EXHIBIT LEAFLET STYLE -->
+    <section class="section" id="template-e">
+      <h2>템플릿 E — 전시 리플릿 스타일</h2>
+      <p class="meta">추천: 전시 포스터/리플릿을 닮은 깔끔한 구성</p>
+      <div class="two-col">
+        <div>
+          <img src="img1.jpg" alt="list1"><img src="img2.jpg" alt="list2" style="margin-top:8px"><img src="img3.jpg" alt="list3" style="margin-top:8px">
+        </div>
+        <div>
+          <h3>작품 개요</h3>
+          <p><strong>제목:</strong> ○○ 프로젝트<br><strong>제작:</strong> 2025<br><strong>매체:</strong> 사진·혼합매체</p>
+          <h3>설명</h3>
+          <p>이 시리즈는 단순한 도형과 빛을 통해 '균형'이라는 개념을 시각적으로 재현하려는 시도입니다.</p>
+          <p><a class="btn" href="#template-a">템플릿 A 예시 보기</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer style="margin-top:26px;text-align:center;color:var(--muted)">템플릿 파일 — 이미지 교체 후 Google Sites 레이아웃 참조용으로 사용하세요.</footer>
+  </div>
+</body>
+</html>
